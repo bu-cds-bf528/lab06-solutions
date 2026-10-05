@@ -29,3 +29,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
 from sliding_window_naive import sliding_window  # noqa: E402, F401
 
 # Paste your filled-in tests below this line.
+
+def test_default_step_is_1():
+    assert list(sliding_window("ACGTAC", 3)) == list(sliding_window("ACGTAC", 3, step=1))
+
